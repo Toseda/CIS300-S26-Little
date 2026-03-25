@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EAEAEA;
+    color: #555555;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #002171;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+header:link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+header:hover {
+    color: #90C7E3
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    letter-spacing: 0.25em;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #1976D2;
+    text-shadow: 1px 1px 1px #CCCCCC;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #000033;
+}
+
+nav {
+    font-weight: bold;
+    font-size: 120%;
+    padding: 0em;
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+nav li {
+    border-bottom: 1px solid #002171
+}
+
+nav:link {
+    color: #5C7FA3;
+}
+
+nav:visited {
+    color: #344873;
+}
+
+nav:hover {
+    color: #A52A2A;
+}
+
+main {
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    display: block;
+    overflow: auto;
+    background-color: #FFFFFF;
+}
+
+main ul {
+    list-style-image: url(marker.gif);
+}
+
+dt {
+    color: #002171
+}
+
+.resort {
+    color: #1976D2;
+    font-weight: bold;
+}
+
+#contact {
+    font-size: 90%;
+}
+
+#wrapper {
+    background-color: #90C7E3;
+    background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+}
+
+#homehero {
+    height: 300px;
+    background-image: url(coast2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#yurthero {
+    height: 300px;
+    background-image: url(yurt.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#trailhero {
+    height: 300px;
+    background-image: url(trail.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+footer {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    padding: 2em;
+    background-color: #FFFFFF;
+}
+
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    section {
+        margin-left: 2em;
+        margin-right: 2em;
+        flex: 1;
+    }
+
+    .flow {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    #wrapper {
+        margin: auto;
+        width: 80%;
+        box-shadow: 3px 3px 3px #333333;
+        border-style: solid;
+        border-radius: 1px;
+        border-color: #002171;
+    }
+
+    nav {
+        text-align: left;
+        padding-left: 1em;
+    }
+
+    @supports (display: grid) {
+        nav ul {
+            flex-direction: column;
+            padding-top: 1em;
+        }
+
+        #wrapper header {
+            grid-area: header;
+        }
+
+        #wrapper main {
+            grid-area: main;
+        }
+
+        #wrapper nav {
+            grid-area: nav;
+        }
+
+        #wrapper .hero {
+            grid-area: hero;
+        }
+
+        #wrapper footer {
+            grid-area: footer;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: 180px;
+            grid-template-areas:
+                "header header"
+                "nav hero"
+                "nav main"
+                "nav footer";
+        }
+
+    }
+}
