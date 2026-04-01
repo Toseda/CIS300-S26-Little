@@ -1,2 +1,0 @@
-# CIS300-S26-Little
-CIS 300
