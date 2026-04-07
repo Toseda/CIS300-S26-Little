@@ -149,15 +149,13 @@ table {
     border-collapse: collapse;
 }
 
-td {
+td, th {
     border: 2px solid #3399CC;
     padding: 0.5em;
-    text-align: center;
 }
 
-th {
-    border: 2px solid #3399CC;
-    padding: 0.5em;
+td {
+    text-align: center;
 }
 
 .text {
@@ -165,7 +163,7 @@ th {
 }
 
 tr:nth-of-type(odd) {
-    background-color: #F5FAFA;
+    background-color: #F5FAFC;
 }
 
 form {
@@ -210,15 +208,13 @@ form textarea {
         width: 60%;
         max-width: 30em;
         display: grid;
-        gap: 1em;
-        grid-template: "textarea input"
-                        "textarea input"
-                        "textarea input"
-                        "textarea input"
-                        "textarea input"
-                        "textarea input"
-                        "textarea input"
-                        "textarea input" / 6em 1fr;
+        grid-gap: 1em;
+        grid-template-columns: 6em 1fr;
+    }
+
+    input[type="submit"] {
+        grid-column: 2 / 3;
+        width: 9em;
     }
 }
 
